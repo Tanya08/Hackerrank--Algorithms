@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        String s = in.next();
+        int k = in.nextInt();
+        int i,c;
+        char ch;
+        String t="";
+        for(i=0;i<n;i++)
+        {
+            ch=s.charAt(i);
+            if(ch>=97&&ch<=122)
+            {
+                c=ch+k;
+                if(c>122)
+                {
+                    while(c>122)
+                    {
+                    c=c-26;
+                    }
+                }
+                t=t+(char)c;
+            }
+            else if(ch>=65&&ch<=90)
+            {
+                c=ch+k;
+                if(c>90)
+                {
+                    while(c>90)
+                    {
+                    c=c-26;
+                    }
+                }
+                t=t+(char)c;
+            }
+            else
+            {
+                t=t+ch;
+            }
+        }
+        System.out.println(t);
+    }
+}

@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int q = in.nextInt();
+        for(int a0 = 0; a0 < q; a0++){
+            String s = in.next();
+            int i,j,k=-1,c=0;
+            String a="hackerrank";
+            s=s.toLowerCase();
+          /**  if(s.length()<a.length())
+            {
+                System.out.println("NO");
+                continue;
+            }**/
+            for(i=0;i<a.length();i++)
+            {
+            for(j=k+1;j<s.length();j++)
+            {
+                if(a.charAt(i)==s.charAt(j))
+                {
+                    c++;
+                    k=j;
+                    break;
+                }
+            }
+        }
+            if(c==a.length())
+            {
+                System.out.println("YES");
+            }
+            else
+            {
+                System.out.println("NO");
+            }
+        }
+    }
+}
